@@ -1,90 +1,55 @@
-# Devtoolkit
+# Webnodex/devtoolkit an Opinionated Developer Toolkit 🛠️
 
-<a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
+Welcome to the `webnodex/devtoolkit` repository! This project is a collection of utility scripts and configurations designed to streamline common development tasks, improve code quality, and enhance the overall developer experience.
 
-✨ Your new, shiny [Nx workspace](https://nx.dev) is almost ready ✨.
+## Features
 
-[Learn more about this workspace setup and its capabilities](https://nx.dev/nx-api/js?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects) or run `npx nx graph` to visually explore what was created. Now, let's get you up to speed!
+This toolkit provides a range of scripts for:
 
-## Finish your CI setup
+- **Git Workflow Automation**: Tools for conventional commits, AI-assisted commit message generation, and Git-aware command execution.
+- **Code Quality & Linting**: Scripts for linting Markdown files and potentially other code types.
+- **File Management**: Utilities like `chmodx.sh` for managing file permissions.
+- **Developer Experience**: Integration with tools like Lefthook for automated Git hooks.
 
-[Click here to finish setting up your workspace!](https://cloud.nx.app/connect/EKszRHjpdz)
+## Getting Started
 
+1. **Clone the repository:**
 
-## Generate a library
+   ```bash
+   git clone https://github.com/webnodex/devtoolkit.git
+   cd devtoolkit
+   ```
 
-```sh
-npx nx g @nx/js:lib packages/pkg1 --publishable --importPath=@my-org/pkg1
-```
+2. **Install dependencies:**
 
-## Run tasks
+   ```bash
+   pnpm install
+   ```
 
-To build the library use:
+   This will also set up Lefthook Git hooks via the `postinstall` script.
 
-```sh
-npx nx build pkg1
-```
+## Documentation 📖
 
-To run any task with Nx use:
+For detailed information on all available scripts, their usage, options, and examples, please refer to the main documentation entry point:
 
-```sh
-npx nx <target> <project-name>
-```
+- **Full Documentation**
 
-These targets are either [inferred automatically](https://nx.dev/concepts/inferred-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) or defined in the `project.json` or `package.json` files.
+## Scripts Overview
 
-[More about running tasks in the docs &raquo;](https://nx.dev/features/run-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+Many useful scripts are defined in the `package.json` and can be run using `pnpm run <script-name>`. Key scripts include:
 
-## Versioning and releasing
+- `pnpm run commit`: Interactive conventional commit message generation.
+- `pnpm run commit:ai`: AI-assisted commit message generation.
+- `pnpm run chmodx`: Make files executable.
+- `pnpm run lintmd`: Lint modified Markdown files.
+- `pnpm run cmmt -- <command>`: Wrap a command with Git stashing, execution on affected files, and auto-commit.
 
-To version and release the library use
+Explore the scripts documentation for a complete list and details.
 
-```
-npx nx release
-```
+## Contributing
 
-Pass `--dry-run` to see what would happen without actually releasing the library.
+Contributions are welcome! Please refer to the (future) `CONTRIBUTING.md` for guidelines.
 
-[Learn more about Nx release &raquo;](hhttps://nx.dev/features/manage-releases?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+## License
 
-## Keep TypeScript project references up to date
-
-Nx automatically updates TypeScript [project references](https://www.typescriptlang.org/docs/handbook/project-references.html) in `tsconfig.json` files to ensure they remain accurate based on your project dependencies (`import` or `require` statements). This sync is automatically done when running tasks such as `build` or `typecheck`, which require updated references to function correctly.
-
-To manually trigger the process to sync the project graph dependencies information to the TypeScript project references, run the following command:
-
-```sh
-npx nx sync
-```
-
-You can enforce that the TypeScript project references are always in the correct state when running in CI by adding a step to your CI job configuration that runs the following command:
-
-```sh
-npx nx sync:check
-```
-
-[Learn more about nx sync](https://nx.dev/reference/nx-commands#sync)
-
-
-[Learn more about Nx on CI](https://nx.dev/ci/intro/ci-with-nx#ready-get-started-with-your-provider?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Install Nx Console
-
-Nx Console is an editor extension that enriches your developer experience. It lets you run tasks, generate code, and improves code autocompletion in your IDE. It is available for VSCode and IntelliJ.
-
-[Install Nx Console &raquo;](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Useful links
-
-Learn more:
-
-- [Learn more about this workspace setup](https://nx.dev/nx-api/js?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects)
-- [Learn about Nx on CI](https://nx.dev/ci/intro/ci-with-nx?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Releasing Packages with Nx release](https://nx.dev/features/manage-releases?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [What are Nx plugins?](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-And join the Nx community:
-- [Discord](https://go.nx.dev/community)
-- [Follow us on X](https://twitter.com/nxdevtools) or [LinkedIn](https://www.linkedin.com/company/nrwl)
-- [Our Youtube channel](https://www.youtube.com/@nxdevtools)
-- [Our blog](https://nx.dev/blog?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+This project is licensed under the (Your License Here - e.g., MIT License).

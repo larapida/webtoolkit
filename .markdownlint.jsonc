@@ -1,0 +1,91 @@
+{
+    "default": true,
+    "MD003": {
+        "style": "atx"
+    },
+    "MD004": {
+        "style": "dash"
+    },
+    "MD007": {
+        "indent": 2,
+        "start_indented": false
+    },
+    "MD013": false,
+    "MD029": {
+        "style": "ordered"
+    },
+    "MD030": {
+        "ul_single": 1,
+        "ol_single": 1,
+        "ul_multi": 1,
+        "ol_multi": 1
+    },
+    "MD033": {
+        "allowed_elements": [
+            "a",
+            "abbr",
+            "b",
+            "br",
+            "caption",
+            "cite",
+            "code",
+            "col",
+            "colgroup",
+            "dd",
+            "del",
+            "details",
+            "dfn",
+            "div",
+            "dl",
+            "dt",
+            "em",
+            "h1",
+            "h2",
+            "h3",
+            "h4",
+            "h5",
+            "h6",
+            "hr",
+            "i",
+            "img",
+            "input",
+            "ins",
+            "kbd",
+            "li",
+            "mark",
+            "ol",
+            "p",
+            "pre",
+            "q",
+            "s",
+            "samp",
+            "small",
+            "span",
+            "strong",
+            "sub",
+            "summary",
+            "sup",
+            "table",
+            "tbody",
+            "td",
+            "tfoot",
+            "th",
+            "thead",
+            "time",
+            "tr",
+            "ul",
+            "var"
+        ]
+    },
+    "MD034": false,
+    "MD035": {
+        "style": "---"
+    },
+    "MD041": false,
+    "MD046": {
+        "style": "fenced"
+    },
+    "MD040": true,
+    "MD047": true,
+    "MD051": true
+}

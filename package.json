@@ -1,15 +1,25 @@
 {
-  "name": "@devtoolkit/source",
+  "name": "@webnodex/devtoolkit-source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "nx": {},
+  "scripts": {
+    "postinstall": "lefthook install",
+    "commit": "pnpm dlx git-cz",
+    "commit:ai": "bash ./scripts/git/cmmt-msg-ai.sh",
+    "chmodx": "bash ./scripts/chmodx.sh",
+    "chmodx:scripts": "bash ./scripts/chmodx.sh -r scripts",
+    "lintmd": "bash ./scripts/lint/lint-md.sh",
+    "cmmt": "bash ./scripts/cmmt.sh"
+  },
   "private": true,
-  "dependencies": {},
   "devDependencies": {
     "@nx/js": "21.1.2",
     "@swc-node/register": "~1.9.1",
     "@swc/core": "~1.5.7",
     "@swc/helpers": "~0.5.11",
+    "lefthook": "^1.11.13",
+    "markdownlint": "^0.38.0",
     "nx": "21.1.2",
     "prettier": "^2.6.2",
     "tslib": "^2.3.0",
